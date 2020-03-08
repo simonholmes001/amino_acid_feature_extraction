@@ -38,7 +38,7 @@ setup(
         ],
     },
     install_requires=requirements,
-    license="BSD license",
+    license="MIT license",
     long_description=readme + '\n\n' + history,
     include_package_data=True,
     keywords='amino_acid_feature_extraction',

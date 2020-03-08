@@ -15,13 +15,24 @@ NO[![Code Qaulity](https://img.shields.io/scrutinizer/g/cookiecutter/cookiecutte
 
 * Free software: MIT license
 
+## Requirements
+
+This repo was developed using python 3.7. Other requirements include:
+
+- Sphinx==1.8.5
+- twine==1.14.0
+- flake8==3.7.8
+- tox==3.14.0
+
 ## Installation
 
 `pip install amino_acid_feature_extraction`
 
+For other installation methods, please see https://amino-acid-feature-extraction.readthedocs.io/en/latest/installation.html
+
 ## Documentation
 
-https://amino-acid-feature-extraction.readthedocs.io.
+Please refer to https://amino-acid-feature-extraction.readthedocs.io.
 
 ## Development
 
@@ -122,4 +133,15 @@ From this request, the following information was retrieved:
 |ConformerModelRMSD3D|Conformer sampling RMSD in Å|
 |EffectiveRotorCount3D|Total number of 3D features (the sum of FeatureAcceptorCount3D, FeatureDonorCount3D, FeatureAnionCount3D, FeatureCationCount3D, FeatureRingCount3D and FeatureHydrophobeCount3D)|
 |ConformerCount3D|The number of conformers in the conformer model for a compound|
+
+The second set of features collected come from the [AAindex: Amino Acid Index Database](https://www.genome.jp/aaindex/aaindex_help.html).
+
+At the time of writing (March, 2020), this database currently consists of 566 indices of physical-chemical information concerning the amino acids.
+The data used here come from the aaindex1, aaindex2 & aaindex3 files which can be downloaded [here](ftp://ftp.genome.jp/pub/db/community/aaindex/).
+Explanations for each of the indices used can be found for [aaindex1](https://www.genome.jp/aaindex/AAindex/list_of_indices), for [aaindex2](https://www.genome.jp/aaindex/AAindex/list_of_matrices)
+& for [aaindex3](https://www.genome.jp/aaindex/AAindex/list_of_potentials). The downloaded files should be put in a folder called `data/`.
+
+
+
+
 
