@@ -23,7 +23,7 @@ amino_acid_feature_extraction
 Extraction of physical-chemical properties of amino acids
 
 
-* Free software: BSD license
+* Free software: MIT license
 * Documentation: https://amino-acid-feature-extraction.readthedocs.io.
 
 
