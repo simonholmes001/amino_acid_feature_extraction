@@ -1,26 +1,27 @@
 # Amino Acid Feature Extraction
 
-[![pypi](https://img.shields.io/pypi/v/feature-extraction-aa.svg)](https://pypi.org/project/feature-extraction-aa)
-[![python](https://img.shields.io/pypi/pyversions/feature-extraction-aa.svg)](https://pypi.org/project/feature-extraction-aa)
-[![Build Status](https://api.travis-ci.org/simonholmes001/feature_extraction_aa.svg?branch=master)](https://travis-ci.org/simonholmes001/feature_extraction_aa)
-[![slack](https://img.shields.io/badge/cookiecutter-Join%20on%20Slack-green?style=flat&logo=slack)](https://join.slack.com/t/cookie-cutter/shared_invite/enQtNzI0Mzg5NjE5Nzk5LTRlYWI2YTZhYmQ4YmU1Y2Q2NmE1ZjkwOGM0NDQyNTIwY2M4ZTgyNDVkNjMxMDdhZGI5ZGE5YmJjM2M3ODJlY2U)
-[![docs](https://readthedocs.org/projects/feature_extraction_aa/badge/?style=flat)](https://readthedocs.org/projects/feature_extraction_aa)
-[![Code Qaulity](https://img.shields.io/scrutinizer/g/cookiecutter/cookiecutter.svg)](https://scrutinizer-ci.com/g/cookiecutter/cookiecutter/?branch=master)
-[![Commits Since](https://img.shields.io/github/commits-since/simonholmes001/feature_extraction_aa/v0.0.1.svg)](https://github.com/simonholmes001/feature_extraction_aa/compare/v0.0.1...master)
-[![Supported Implementations](https://img.shields.io/pypi/implementation/feature-extraction-aa.svg)](https://pypi.org/project/feature-extraction-aa)
-[![Supported Verions](https://img.shields.io/pypi/pyversions/feature-extraction-aa.svg)](https://pypi.org/project/feature-extraction-aa)
-[![Wheel](https://img.shields.io/pypi/wheel/feature-extraction-aa.svg)](https://pypi.org/project/feature-extraction-aa)
+[![pypi](https://img.shields.io/pypi/v/amino_acid_feature_extraction.svg)](https://pypi.python.org/pypi/amino_acid_feature_extraction)
+[![python](https://img.shields.io/pypi/pyversions/amino_acid_feature_extraction.svg)](https://pypi.org/project/amino_acid_feature_extraction)
+[![Build Status](https://img.shields.io/travis/simonholmes001/amino_acid_feature_extraction.svg)](https://travis-ci.com/simonholmes001/amino_acid_feature_extraction)
+NO[![slack](https://img.shields.io/badge/cookiecutter-Join%20on%20Slack-green?style=flat&logo=slack)](https://join.slack.com/t/cookie-cutter/shared_invite/enQtNzI0Mzg5NjE5Nzk5LTRlYWI2YTZhYmQ4YmU1Y2Q2NmE1ZjkwOGM0NDQyNTIwY2M4ZTgyNDVkNjMxMDdhZGI5ZGE5YmJjM2M3ODJlY2U)
+[![docs](https://readthedocs.org/projects/amino-acid-feature-extraction/badge/?version=latest)](https://amino-acid-feature-extraction.readthedocs.io/en/latest/?badge=latest)
+NO[![Code Qaulity](https://img.shields.io/scrutinizer/g/cookiecutter/cookiecutter.svg)](https://scrutinizer-ci.com/g/cookiecutter/cookiecutter/?branch=master)
+[![Commits Since](https://img.shields.io/github/commits-since/simonholmes001/amino_acid_feature_extraction/v0.0.1.svg)](https://github.com/simonholmes001/amino_acid_feature_extraction/compare/v0.0.1...master)
+[![Supported Implementations](https://img.shields.io/pypi/implementation/amino_acid_feature_extraction.svg)](https://pypi.org/project/amino_acid_feature_extraction)
+[![Supported Verions](https://img.shields.io/pypi/pyversions/amino_acid_feature_extraction.svg)](https://pypi.org/project/amino_acid_feature_extraction)
+[![Wheel](https://img.shields.io/pypi/wheel/amino_acid_feature_extraction.svg)](https://pypi.org/project/amino_acid_feature_extraction)
+[![GitHub](https://pyup.io/repos/github/simonholmes001/amino_acid_feature_extraction/shield.svg)](https://pyup.io/repos/github/simonholmes001/amino_acid_feature_extraction/)
 [![license](https://img.shields.io/pypi/l/sphinx_rtd_theme.svg)](https://pypi.python.org/pypi/sphinx_rtd_theme/)
 
 * Free software: MIT license
 
 ## Installation
 
-`pip install feature-extraction-aa`
+`pip install amino_acid_feature_extraction`
 
 ## Documentation
 
-https://feature_extraction_aa.readthedocs.io/
+https://amino-acid-feature-extraction.readthedocs.io.
 
 ## Development
 
@@ -121,5 +122,4 @@ From this request, the following information was retrieved:
 |ConformerModelRMSD3D|Conformer sampling RMSD in Å|
 |EffectiveRotorCount3D|Total number of 3D features (the sum of FeatureAcceptorCount3D, FeatureDonorCount3D, FeatureAnionCount3D, FeatureCationCount3D, FeatureRingCount3D and FeatureHydrophobeCount3D)|
 |ConformerCount3D|The number of conformers in the conformer model for a compound|
-
 
