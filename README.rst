@@ -30,7 +30,8 @@ Extraction of physical-chemical properties of amino acids
 Features
 --------
 
-* TODO
+For a complete overview of the amino acid feature extraction process as proposed
+here, please refer to https://github.com/simonholmes001/amino_acid_feature_extraction/blob/master/README.md
 
 Credits
 -------
