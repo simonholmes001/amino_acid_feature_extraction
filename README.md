@@ -44,13 +44,14 @@ To run all the tests run:
 
 ### Feature Extraction & Pre-Processing
 
-The `download_feature_extraction.sh` file performs three tasks:
+The `download_feature_extraction.sh` file performs four tasks:
 - uses a FTP request to download the aaindex1 file (see [below](#aaindex))
 - performs pre-processing steps on the downloaded file to extract the index information
 - creates the folders necessary in the basic file structure to store the data (will create a `data` folder in which
 the downloaded `aaindex1` file is stored & an `output` folder in which the extracted features are stored)
+- combines the features extracted from pubchem (see [below](#below)) to the features extracted from the `aaindex1` file
 
-The user should also use the [pubchem_API script](https://pypi.org/project/pubchem-api/#description) to download the amino acid
+<a name="below"></a>The user should also use the [pubchem_API script](https://pypi.org/project/pubchem-api/#description) to download the amino acid
 features described [here](#features).
 
 # Background
