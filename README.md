@@ -52,7 +52,7 @@ the downloaded `aaindex1` file is stored & an `output` folder in which the extra
 - combines the features extracted from pubchem (see [below](#below)) to the features extracted from the `aaindex1` file
 
 <a name="below"></a>The user should also use the [pubchem_API script](https://pypi.org/project/pubchem-api/#description) to download the amino acid
-features described [here](#features).
+features described [here](#features). The output file from this should be saved in the `output` folder.
 
 # Background
 
