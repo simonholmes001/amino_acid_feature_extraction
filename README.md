@@ -40,6 +40,19 @@ To run all the tests run:
 
 `tox`
 
+# Usage
+
+### Feature Extraction & Pre-Processing
+
+The `download_feature_extraction.sh` file performs three tasks:
+- uses a FTP request to download the aaindex1 file (see [below](#aaindex))
+- performs pre-processing steps on the downloaded file to extract the index information
+- creates the folders necessary in the basic file structure to store the data (will create a `data` folder in which
+the downloaded `aaindex1` file is stored & an `output` folder in which the extracted features are stored)
+
+The user should also use the [pubchem_API script](https://pypi.org/project/pubchem-api/#description) to download the amino acid
+features described [here](#features).
+
 # Background
 
 ## Amino Acids
@@ -103,7 +116,7 @@ Amino acid codes:
 The first set of features for each of the amino acids was extracted from the [PubChem data base](https://pubchem.ncbi.nlm.nih.gov/)
 using the [pubchem-api](https://pypi.org/project/pubchem-api/).
 
-From this request, the following information was retrieved:
+From this request, the following information was retrieved <a name="features"></a>:
 
 
 | Property | Notes |
@@ -134,7 +147,9 @@ From this request, the following information was retrieved:
 |EffectiveRotorCount3D|Total number of 3D features (the sum of FeatureAcceptorCount3D, FeatureDonorCount3D, FeatureAnionCount3D, FeatureCationCount3D, FeatureRingCount3D and FeatureHydrophobeCount3D)|
 |ConformerCount3D|The number of conformers in the conformer model for a compound|
 
-The second set of features collected come from the [AAindex: Amino Acid Index Database](https://www.genome.jp/aaindex/aaindex_help.html).
+#### Second Set of Features
+
+The second set of features collected come from the <a name="aaindex"></a> [AAindex: Amino Acid Index Database](https://www.genome.jp/aaindex/aaindex_help.html).
 
 At the time of writing (March, 2020), this database currently consists of 566 indices of physical-chemical information concerning the amino acids.
 The data used here come from the aaindex1, aaindex2 & aaindex3 files which can be downloaded [here](ftp://ftp.genome.jp/pub/db/community/aaindex/).
