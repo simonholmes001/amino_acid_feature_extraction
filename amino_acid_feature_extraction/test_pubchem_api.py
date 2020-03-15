@@ -1,5 +1,6 @@
 import pubchem_api
 
+import pubchem_api
 from pubchem_api import pubchem_api
 
 base_url = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/"
