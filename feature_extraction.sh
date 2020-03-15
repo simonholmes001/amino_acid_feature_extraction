@@ -4,16 +4,16 @@
 
 echo Downloading amino acid physical-chemical features from //ftp.genome.jp/pub/db/community/aaindex/...
 
-python3 ftp_call.py
+python3 ./amino_acid_feature_extraction/ftp_call.py
 
 echo Downloading amino acid physical-chemcial features from PubChem...
 
-python3 test_pubchem_api.py
+python3 ./amino_acid_feature_extraction/test_pubchem_api.py
 cat test_data.txt # Read the status of the HTML request
 rm test_data.txt
 
-DATA_PATH="../data"
-OUTPUT_PATH="../output"
+DATA_PATH="./data"
+OUTPUT_PATH="./output"
 OUTPUT_FILE_1="predata.txt"
 OUTPUT_FILE="data.txt"
 
@@ -39,7 +39,7 @@ rm $OUTPUT_FILE_1
 
 echo Combining datasets...
 
-python3 combine_features.py
+python3 ./amino_acid_feature_extraction/combine_features.py
 
 ls $OUTPUT_PATH
 
