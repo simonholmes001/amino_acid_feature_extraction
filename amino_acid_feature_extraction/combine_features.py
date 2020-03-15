@@ -1,6 +1,6 @@
 import pandas as pd
 
-OUTPUT_PATH = "../output"
+OUTPUT_PATH = "./output"
 INPUT_TEXT = "data.txt"
 INPUT_CSV = "test_data.csv"
 OUTPUT_CSV = "features.csv"
