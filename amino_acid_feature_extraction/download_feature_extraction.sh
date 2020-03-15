@@ -6,6 +6,12 @@ echo Downloading amino acid physical-chemical features from //ftp.genome.jp/pub/
 
 python3 ftp_call.py
 
+echo Downloading amino acid physical-chemcial features from PubChem...
+
+python3 test_pubchem_api.py
+cat test_data.txt # Read the status of the HTML request
+rm test_data.txt
+
 DATA_PATH="../data"
 OUTPUT_PATH="../output"
 OUTPUT_FILE_1="predata.txt"
@@ -17,6 +23,7 @@ mkdir $DATA_PATH
 mkdir $OUTPUT_PATH
 
 mv aaindex1 $DATA_PATH
+mv test_data.csv $OUTPUT_PATH
 
 echo Extracting index data...
 
@@ -29,3 +36,11 @@ done
 echo Extraction complete
 
 rm $OUTPUT_FILE_1
+
+echo Combining datasets...
+
+python3 combine_features.py
+
+ls $OUTPUT_PATH
+
+echo Feature extraction complete
