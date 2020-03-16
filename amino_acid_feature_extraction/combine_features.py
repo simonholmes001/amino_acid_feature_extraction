@@ -19,7 +19,7 @@ df_text_transpose = df_text_transpose[colnames] # Reassign column names
 df_join = pd.concat([df_csv, df_text_transpose], axis=1, join='inner') # Join the databases
 df_join = df_join.drop("CID_2", axis=1)
 
-df_join.to_csv(OUTPUT_PATH + '/' + OUTPUT_CSV, encoding='utf-8') # Save joined data base to a csv file
+df_join.to_csv(OUTPUT_PATH + '/' + OUTPUT_CSV, encoding='utf-8', index=False) # Save joined data base to a csv file
 
 # print("The shape of df_csv is: {}".format(df_csv.shape))
 # print("The shape of df_text is: {}".format(df_text.shape))
