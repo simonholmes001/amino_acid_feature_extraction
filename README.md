@@ -17,18 +17,8 @@ NO[![Code Qaulity](https://img.shields.io/scrutinizer/g/cookiecutter/cookiecutte
 
 ## Requirements
 
-This repo was developed using python 3.7. Other requirements include:
-
-- Sphinx==1.8.5
-- twine==1.14.0
-- flake8==3.7.8
-- tox==3.14.0
-
-## Installation
-
-`pip install amino_acid_feature_extraction`
-
-For other installation methods, please see https://amino-acid-feature-extraction.readthedocs.io/en/latest/installation.html
+This project was developed in python3.7. All other requirements are installed via the creation
+of a conda virtual environment when the `feature_extraction.sh` script is run.
 
 ## Documentation
 
@@ -36,6 +26,7 @@ Please refer to https://amino-acid-feature-extraction.readthedocs.io.
 
 ## Development
 
+(Work in progress, unit tests not completed)
 To run all the tests run:
 
 `tox`
@@ -44,15 +35,26 @@ To run all the tests run:
 
 ### Feature Extraction & Pre-Processing
 
-The `download_feature_extraction.sh` file performs four tasks:
-- uses a FTP request to download the aaindex1 file (see [below](#aaindex))
-- performs pre-processing steps on the downloaded file to extract the index information
-- creates the folders necessary in the basic file structure to store the data (will create a `data` folder in which
-the downloaded `aaindex1` file is stored & an `output` folder in which the extracted features are stored)
-- combines the features extracted from pubchem (see [below](#below)) to the features extracted from the `aaindex1` file
+To run the project, download the project files from the github repository using
+the following command:
 
-<a name="below"></a>The user should also use the [pubchem_API script](https://pypi.org/project/pubchem-api/#description) to download the amino acid
-features described [here](#features). The output file from this should be saved in the `output` folder.
+`git clone https://github.com/simonholmes001/amino_acid_feature_extraction.git`
+
+`cd` into the folder containing the repo & run the following command to execute the project:
+
+`bash -i feature_extraction.sh`
+
+Running the `feature_extraction.sh` script provides all of the functionalities required in
+order to create a dataset of amino acid chemical & physical properties:
+- Creates a virtual environment in which to run the code
+- FTP request to download the aaindex1 file (see [below](#aaindex))
+- API call to the [PubChem database](https://pubchem.ncbi.nlm.nih.gov/) to extract physical-chemical data (see [here](#pubchem))
+- Data pre-processing steps to extract the index information
+- Creates the folder structure necessary in the basic file structure to store the data (will create a `data` folder in which
+the downloaded `aaindex1` file is stored & an `output` folder in which the extracted features are stored)
+- Combines the features extracted from pubchem (see [below](#below)) to the features extracted from the `aaindex1` file
+- Standardises the features
+- Saves all the data in a csv file & in a numpy array
 
 # Background
 
@@ -86,11 +88,11 @@ Amino acid codes:
 | Glutamine      | Gln | Q | [5961](https://pubchem.ncbi.nlm.nih.gov/compound/5961) |
 | Asparagine      | Asn | N | [6267](https://pubchem.ncbi.nlm.nih.gov/compound/6267) |
 | Histidine      | His | H | [6274](https://pubchem.ncbi.nlm.nih.gov/compound/6274) |
+**Polar (Amphipathic (often found at the surface of proteins or lipid membranes, sometimes also classified as polar)**:
 | Serine      | Ser | S | [5951](https://pubchem.ncbi.nlm.nih.gov/compound/5951) |
 | Threonine      | Thr | T | [6288](https://pubchem.ncbi.nlm.nih.gov/compound/6288) |
 | Cysteine    | Cys | C | [5862](https://pubchem.ncbi.nlm.nih.gov/compound/5862) |
 
-**Polar (Amphipathic (often found at the surface of proteins or lipid membranes, sometimes also classified as polar)**:
 
 | Amino Acid | Three Letter Code | One Letter Code | PubChem Id |
 | :-------------: |:-------------:| :-------------:| :-------------:|
@@ -112,7 +114,7 @@ Amino acid codes:
 
 # Feature Extraction
 
-## Sources
+## Sources <a name="pubchem"></a>
 
 The first set of features for each of the amino acids was extracted from the [PubChem data base](https://pubchem.ncbi.nlm.nih.gov/)
 using the [pubchem-api](https://pypi.org/project/pubchem-api/).
@@ -156,8 +158,3 @@ At the time of writing (March, 2020), this database currently consists of 566 in
 The data used here come from the aaindex1, aaindex2 & aaindex3 files which can be downloaded [here](ftp://ftp.genome.jp/pub/db/community/aaindex/).
 Explanations for each of the indices used can be found for [aaindex1](https://www.genome.jp/aaindex/AAindex/list_of_indices), for [aaindex2](https://www.genome.jp/aaindex/AAindex/list_of_matrices)
 & for [aaindex3](https://www.genome.jp/aaindex/AAindex/list_of_potentials). The downloaded files should be put in a folder called `data/`.
-
-
-
-
-
