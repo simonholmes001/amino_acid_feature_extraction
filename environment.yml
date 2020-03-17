@@ -1,0 +1,10 @@
+# Set-up of conda environment
+
+name: feature_extraction
+dependencies:
+    - python=3.7
+    - numpy
+    - pandas
+    - scikit-learn
+    - pip:
+          - pubchem_api
