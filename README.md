@@ -1,16 +1,10 @@
 # Amino Acid Feature Extraction
 
-[![pypi](https://img.shields.io/pypi/v/amino_acid_feature_extraction.svg)](https://pypi.python.org/pypi/amino_acid_feature_extraction)
-[![python](https://img.shields.io/pypi/pyversions/amino_acid_feature_extraction.svg)](https://pypi.org/project/amino_acid_feature_extraction)
 [![Build Status](https://img.shields.io/travis/simonholmes001/amino_acid_feature_extraction.svg)](https://travis-ci.com/simonholmes001/amino_acid_feature_extraction)
-NO[![slack](https://img.shields.io/badge/cookiecutter-Join%20on%20Slack-green?style=flat&logo=slack)](https://join.slack.com/t/cookie-cutter/shared_invite/enQtNzI0Mzg5NjE5Nzk5LTRlYWI2YTZhYmQ4YmU1Y2Q2NmE1ZjkwOGM0NDQyNTIwY2M4ZTgyNDVkNjMxMDdhZGI5ZGE5YmJjM2M3ODJlY2U)
 [![docs](https://readthedocs.org/projects/amino-acid-feature-extraction/badge/?version=latest)](https://amino-acid-feature-extraction.readthedocs.io/en/latest/?badge=latest)
-NO[![Code Qaulity](https://img.shields.io/scrutinizer/g/cookiecutter/cookiecutter.svg)](https://scrutinizer-ci.com/g/cookiecutter/cookiecutter/?branch=master)
-[![Commits Since](https://img.shields.io/github/commits-since/simonholmes001/amino_acid_feature_extraction/v0.0.1.svg)](https://github.com/simonholmes001/amino_acid_feature_extraction/compare/v0.0.1...master)
-[![Supported Implementations](https://img.shields.io/pypi/implementation/amino_acid_feature_extraction.svg)](https://pypi.org/project/amino_acid_feature_extraction)
-[![Supported Verions](https://img.shields.io/pypi/pyversions/amino_acid_feature_extraction.svg)](https://pypi.org/project/amino_acid_feature_extraction)
-[![Wheel](https://img.shields.io/pypi/wheel/amino_acid_feature_extraction.svg)](https://pypi.org/project/amino_acid_feature_extraction)
-[![GitHub](https://pyup.io/repos/github/simonholmes001/amino_acid_feature_extraction/shield.svg)](https://pyup.io/repos/github/simonholmes001/amino_acid_feature_extraction/)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/simonholmes001/amino_acid_feature_extraction/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/simonholmes001/amino_acid_feature_extraction/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/simonholmes001/amino_acid_feature_extraction/badges/build.png?b=master)](https://scrutinizer-ci.com/g/simonholmes001/amino_acid_feature_extraction/build-status/master)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/simonholmes001/amino_acid_feature_extraction/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![license](https://img.shields.io/pypi/l/sphinx_rtd_theme.svg)](https://pypi.python.org/pypi/sphinx_rtd_theme/)
 
 * Free software: MIT license
@@ -88,6 +82,7 @@ Amino acid codes:
 | Glutamine      | Gln | Q | [5961](https://pubchem.ncbi.nlm.nih.gov/compound/5961) |
 | Asparagine      | Asn | N | [6267](https://pubchem.ncbi.nlm.nih.gov/compound/6267) |
 | Histidine      | His | H | [6274](https://pubchem.ncbi.nlm.nih.gov/compound/6274) |
+
 **Polar (Amphipathic (often found at the surface of proteins or lipid membranes, sometimes also classified as polar)**:
 | Serine      | Ser | S | [5951](https://pubchem.ncbi.nlm.nih.gov/compound/5951) |
 | Threonine      | Thr | T | [6288](https://pubchem.ncbi.nlm.nih.gov/compound/6288) |
@@ -155,6 +150,5 @@ From this request, the following information was retrieved <a name="features"></
 The second set of features collected come from the <a name="aaindex"></a> [AAindex: Amino Acid Index Database](https://www.genome.jp/aaindex/aaindex_help.html).
 
 At the time of writing (March, 2020), this database currently consists of 566 indices of physical-chemical information concerning the amino acids.
-The data used here come from the aaindex1, aaindex2 & aaindex3 files which can be downloaded [here](ftp://ftp.genome.jp/pub/db/community/aaindex/).
-Explanations for each of the indices used can be found for [aaindex1](https://www.genome.jp/aaindex/AAindex/list_of_indices), for [aaindex2](https://www.genome.jp/aaindex/AAindex/list_of_matrices)
-& for [aaindex3](https://www.genome.jp/aaindex/AAindex/list_of_potentials). The downloaded files should be put in a folder called `data/`.
+The data used here come from the aaindex1 file, which can be downloaded [here](ftp://ftp.genome.jp/pub/db/community/aaindex/).
+Explanations for this index can be found here [aaindex1](https://www.genome.jp/aaindex/AAindex/list_of_indices).
