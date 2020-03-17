@@ -2,6 +2,16 @@
 
 # Script to extract physcial-chemical information for amino acids
 
+echo Creating virtual environment for amino acid feature extraction...
+
+conda update -n base conda # to update to latest version of conda
+conda remove --name feature_extraction --all # to remove any previously installed environments called feature_extraction
+conda activate base
+conda env create -f environment.yml
+conda activate feature_extraction
+
+echo Virtual environment ready
+
 echo Downloading amino acid physical-chemical features from //ftp.genome.jp/pub/db/community/aaindex/...
 
 python3 ./amino_acid_feature_extraction/ftp_call.py
@@ -44,3 +54,29 @@ python3 ./amino_acid_feature_extraction/combine_features.py
 ls $OUTPUT_PATH
 
 echo Feature extraction complete
+
+echo Starting data standardisation...
+
+python3 ./amino_acid_feature_extraction/normalisation.py
+
+echo Data standardisation complete
+
+echo Starting one-hot encoding...
+
+python3 ./amino_acid_feature_extraction/one_hot_encoding.py
+
+echo One-hot encoding complete
+
+echo Feature extraction is now complete. Data files generated can be found in
+
+cd $OUTPUT_PATH
+pwd
+
+echo and include the following files...
+
+ls
+cd ../
+
+conda deactivate
+
+echo Script completed
