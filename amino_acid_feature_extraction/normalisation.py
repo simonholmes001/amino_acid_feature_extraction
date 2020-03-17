@@ -2,8 +2,8 @@ import pandas as pd
 import sklearn
 from sklearn.preprocessing import StandardScaler
 
-INPUT_PATH = "../output" # Do I have to change to "./output" if called from feature_extraction.sh -> YES
-OUTPUT_PATH = "../output" # Run as "../output" when running as an individual script, not as part of feature_extraction.sh
+INPUT_PATH = "./output" # Do I have to change to "./output" if called from feature_extraction.sh -> YES
+OUTPUT_PATH = "./output" # Run as "../output" when running as an individual script, not as part of feature_extraction.sh
 INPUT_CSV = "features.csv"
 OUTPUT_CSV = "standardised_features.csv"
 
