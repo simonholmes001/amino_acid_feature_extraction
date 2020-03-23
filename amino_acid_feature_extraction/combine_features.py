@@ -6,7 +6,7 @@ INPUT_CSV = "test_data.csv"
 OUTPUT_CSV = "features.csv"
 
 df_text = pd.read_table(OUTPUT_PATH + '/' + INPUT_TEXT, delim_whitespace=True, names=('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't'))
-df_text_transpose = df_text.T
+df_text_transpose = df_text.T # data.txt has the 20 amino acids as columns but need the data to have the amino acids as rows, need to transform a 500 x 20 matrix to a 20 x 500 matrix
 df_csv = pd.read_csv(OUTPUT_PATH + '/' + INPUT_CSV)
 
 df_text_transpose.index = df_csv.index # Homogenize the index values
