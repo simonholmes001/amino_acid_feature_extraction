@@ -21,7 +21,7 @@ class OneHotEncoding:
         df_join = pd.concat([df, df_standardised_features], axis=1, join='inner') # Join the databases
         df_join.drop('CID', axis=1, inplace=True)
 
-        df_join.to_csv(OUTPUT_PATH + '/' + OUTPUT_CSV, encoding='utf-8', index=False) # Save joined data base to a csv file
+        df_join.to_csv(OUTPUT_PATH + '/' + OUTPUT_CSV, encoding='utf-8', index=False, header=False) # Save joined data base to a csv file
         one_hot_encoded = df_join.to_numpy() # Convert pandas to numpy array
         np.save(OUTPUT_PATH + '/' + OUTPUT_NUMPY, one_hot_encoded) # Save numpy array to disk
 
